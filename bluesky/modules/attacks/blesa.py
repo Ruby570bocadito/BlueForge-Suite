@@ -15,7 +15,7 @@ class Blesa(BaseModule):
 
     name = "blesa"
     description = "BLESA (CVE-2020-9770): Detecta dispositivos BLE vulnerables a spoofing durante reconexión"
-    author = "Bluesky Project"
+    author = "Ruby570bocadito"
     version = "0.1.0"
     cve = "CVE-2020-9770, CVE-2020-10556"
     cve_url = "https://www.purdue.edu/newsroom/releases/2020/Q3/purdue-university-and-researchers-at-cisco,-the-university-of-texas,-iowa-state,-take-first-step-against-bluetooth-vulnerability.html"

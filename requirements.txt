@@ -27,20 +27,21 @@ pytest>=7.0
 pytest-cov>=4.0
 
 # ─── Web Dashboard ──────────────────────────────────────────────────────────
-# flask>=3.0.0           # Descomentar o instalar manualmente para bluesky web
-# Jinja2>=3.0.0          # Motor de templates (viene con Flask)
+flask>=3.0.0
 
 # ─── Bluetooth (obligatorio para funcionalidad real) ────────────────────────
-# bleak>=0.14.0          # BLE cross-platform (Windows, Linux, macOS, Android)
-# pybluez>=0.22          # Bluetooth Classic (Linux, Windows con drivers)
-# scapy>=2.4.5           # Packet crafting (KNOB, BLUFFS, BTLEJack, SweynTooth)
-# cryptography>=3.4.0    # Criptografía BLE (Crackle, cifrados)
+bleak>=0.14.0          # BLE cross-platform
+scapy>=2.4.5           # Packet crafting (KNOB, BLUFFS, BTLEJack, SweynTooth)
+cryptography>=3.4.0    # Criptografía BLE (Crackle, cifrados)
 
 # ─── Herramientas adicionales ───────────────────────────────────────────────
-# requests>=2.25.0       # Para plugins HTTP, OSINT, scraping
-# pycryptodome>=3.0      # Alternativa a cryptography (AES, ECC)
-# bs4>=4.10.0            # BeautifulSoup - parsing HTML (OSINT)
-# lxml>=4.9.0            # XML parsing
+requests>=2.25.0
+
+# ─── Opcionales (instalar si es necesario) ─────────────────────────────────
+# pybluez>=0.22        # Bluetooth Classic (solo Linux legacy, no recomendado)
+# pycryptodome>=3.0    # Alternativa cryptography (AES, ECC)
+# bs4>=4.10.0          # BeautifulSoup - parsing HTML (OSINT)
+# lxml>=4.9.0          # XML parsing
 
 # ─── Notas de compatibilidad ──────────────────────────────────────────────
 # Windows: Usar bleak para BLE. PyBluez no funciona en Windows moderno.

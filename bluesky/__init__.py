@@ -1,8 +1,8 @@
 """
-Bluesky - Bluetooth Security Auditing Framework
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+bluesky - Bluetooth Security Auditing Framework
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Bluesky es un framework de auditoría Bluetooth de código abierto con
+bluesky es un framework de auditoría Bluetooth de código abierto con
 arquitectura modular tipo Metasploit. Unifica 15+ módulos de ataque,
 3 escáneres, 3 exploits, un escáner de vulnerabilidades integrado
 (13+ checks), consola interactiva REPL, dashboard web (Flask),
@@ -32,13 +32,13 @@ Escáneres: device_scanner, service_scanner, vuln (13+ vulnerabilidades).
 
 Exploits: keystroke_injection, l2cap_fuzz, rfcomm_shell.
 
-Author: Bluesky Project
+Author: Ruby570bocadito
 Version: 0.2.0
 License: MIT
 """
 
 __version__ = "0.2.0"
-__author__ = "Bluesky Project"
+__author__ = "Ruby570bocadito"
 __description__ = "Bluetooth Security Auditing Framework - Metasploit-style"
 
 # Core components

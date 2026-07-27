@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Bluesky Configuration Manager
+bluesky Configuration Manager
 ==============================
 Gestiona la configuración persistente del proyecto en formato JSON.
 Soporta XDG Base Directory, múltiples rutas de búsqueda, validación
@@ -119,7 +119,7 @@ class ConfigValidationError(ConfigError):
 # ─── Gestor de configuración ─────────────────────────────────────────────────
 
 class BlueskyConfig:
-    """Gestor de configuración singleton para Bluesky.
+    """Gestor de configuración singleton para bluesky.
 
     Uso:
         cfg = BlueskyConfig()
@@ -409,7 +409,7 @@ class BlueskyConfig:
         """Retorna resumen legible de la configuración activa."""
         lines = [
             "╔══════════════════════════════════════╗",
-            "║      Bluesky Config Summary          ║",
+            "║      bluesky Config Summary          ║",
             "╚══════════════════════════════════════╝",
             "",
             f"  Config file : {self._path or '(defaults)'}",
@@ -437,7 +437,7 @@ def get_config() -> BlueskyConfig:
     """Obtiene/crea la instancia singleton de configuración.
 
     Returns:
-        Instancia de BlueskyConfig (ya cargada).
+         Instancia de blueskyConfig (ya cargada).
     """
     global _config_instance
     if _config_instance is None:

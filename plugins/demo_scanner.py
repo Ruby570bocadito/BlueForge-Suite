@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Bluesky Plugin: demo_scanner
+bluesky Plugin: demo_scanner
 Escáner Bluetooth de demostración - descubre dispositivos simulados.
 """
 
@@ -10,7 +10,7 @@ PLUGIN_INFO = {
     "name": "demo_scanner",
     "version": "1.0.0",
     "description": "Escáner Bluetooth de demostración (simulado)",
-    "author": "Bluesky Team",
+    "author": "Ruby570bocadito",
     "type": "scanner",
     "module": "DemoScanner",
     "requires": [],
@@ -65,6 +65,6 @@ class DemoScanner:
             "name": self.name,
             "description": self.description,
             "version": "1.0.0",
-            "author": "Bluesky Team",
+    "author": "Ruby570bocadito",
             "type": "scanner",
         }

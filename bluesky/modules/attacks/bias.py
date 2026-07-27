@@ -15,7 +15,7 @@ class Bias(BaseModule):
 
     name = "bias"
     description = "BIAS (CVE-2020-10135): Bluetooth Impersonation Attack - Suplanta identidad de dispositivos emparejados previamente"
-    author = "Bluesky Project"
+    author = "Ruby570bocadito"
     version = "0.1.0"
     cve = "CVE-2020-10135"
     cve_url = "https://francozappa.github.io/about-bias/"

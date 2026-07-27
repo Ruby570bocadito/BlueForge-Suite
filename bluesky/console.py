@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Bluesky Console - Modo interactivo REPL
-========================================
+bluesky Console - Modo interactivo REPL
+=======================================
 Consola interactiva tipo Metasploit para auditoría Bluetooth.
 
 Comandos:
@@ -23,11 +23,6 @@ import os
 import cmd
 import shlex
 from pathlib import Path
-
-# Asegurar path
-_THIS_DIR = Path(__file__).parent.parent
-if str(_THIS_DIR) not in sys.path:
-    sys.path.insert(0, str(_THIS_DIR))
 
 try:
     from rich.console import Console
@@ -51,7 +46,7 @@ from bluesky.utils.config import get_config, parse_key_value
 
 
 class BlueskyConsole(cmd.Cmd):
-    """Consola interactiva Bluesky estilo Metasploit."""
+    """Consola interactiva bluesky estilo Metasploit."""
 
     intro = ""
     prompt = "bluesky > "
@@ -795,7 +790,7 @@ class BlueskyConsole(cmd.Cmd):
         print(f"  {colorize(f'✅ Reporte generado: {filepath}', 'green')}")
 
     def do_config(self, arg):
-        """config [set|save|show] - Gestionar configuración de Bluesky"""
+        """config [set|save|show] - Gestionar configuración de bluesky"""
         args = shlex.split(arg) if arg else []
 
         if not args or args[0] == "show":
@@ -917,12 +912,12 @@ class BlueskyConsole(cmd.Cmd):
                 print(help_text)
 
     def do_exit(self, arg):
-        """exit - Salir de Bluesky Console"""
+        """exit - Salir de bluesky Console"""
         print(f"\n  {colorize('👋 Hasta luego!', 'cyan')}")
         return True
 
     def do_quit(self, arg):
-        """quit - Salir de Bluesky Console"""
+        """quit - Salir de bluesky Console"""
         return self.do_exit(arg)
 
     def do_EOF(self, arg):
@@ -941,7 +936,7 @@ class BlueskyConsole(cmd.Cmd):
 
 
 def start_console():
-    """Inicia la consola interactiva Bluesky."""
+    """Inicia la consola interactiva bluesky."""
     # Fix para Windows: readline no tiene atributo 'backend'
     if sys.platform == "win32":
         try:

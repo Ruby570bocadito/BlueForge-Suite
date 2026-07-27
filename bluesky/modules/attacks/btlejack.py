@@ -81,7 +81,7 @@ class BTLEJack(BaseModule):
         "manipula conexiones Bluetooth Low Energy activas. Soporta "
         "sniffing pasivo, hijacking de conexión, MITM e inyección de datos."
     )
-    author = "Bluesky Project"
+    author = "Ruby570bocadito"
     version = "1.0.0"
     cve = "No CVE asignado (técnica de ataque)"
     cve_url = "https://github.com/virtualabs/btlejack"

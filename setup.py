@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Bluesky - Bluetooth Security Auditing Framework
+bluesky - Bluetooth Security Auditing Framework
 Setup script for pip installation.
 """
 
@@ -14,13 +14,13 @@ except FileNotFoundError:
     long_description = "Bluetooth Security Auditing Framework"
 
 setup(
-    name="bluesky-audit",
-    version="0.1.0",
-    author="Bluesky Project",
+    name="bluesky",
+    version="0.2.0",
+    author="Ruby570bocadito",
     description="Bluetooth Security Auditing Framework for Windows, Linux & Termux",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/bluesky/bluesky",
+    url="https://github.com/Ruby570bocadito/bluesky",
     packages=find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",

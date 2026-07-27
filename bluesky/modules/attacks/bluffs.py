@@ -75,7 +75,7 @@ class Bluffs(BaseModule):
         "Compromete claves de sesión pasadas y futuras. "
         "Ataque activo via scapy + inyección LL/SDB"
     )
-    author = "Bluesky Project"
+    author = "Ruby570bocadito"
     version = "2.0.0"
     cve = "CVE-2023-24023"
     cve_url = "https://github.com/nccgroup/BLUFFS"

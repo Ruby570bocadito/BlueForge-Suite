@@ -17,7 +17,7 @@ class DeviceScanner(BaseModule):
 
     name = "scan"
     description = "Escáner de dispositivos Bluetooth - Descubre dispositivos Classic y BLE cercanos"
-    author = "Bluesky Project"
+    author = "Ruby570bocadito"
     version = "0.1.0"
     cve = ""
     requires_hardware = []

@@ -25,7 +25,7 @@ class Autopilot(BaseModule):
 
     name = "autopilot"
     description = "Autopilot: Escaneo → Detección de vulnerabilidades → Ataques → Reporte automatizado"
-    author = "Bluesky Project"
+    author = "Ruby570bocadito"
     version = "1.0.0"
     cve = ""
     requires_hardware = []
@@ -340,7 +340,7 @@ class Autopilot(BaseModule):
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Bluesky Autopilot Report</title>
+    <title>bluesky Autopilot Report</title>
     <style>
         body {{ font-family: 'Segoe UI', Arial, sans-serif; background: #1a1a2e; color: #eee; margin: 0; padding: 20px; }}
         .container {{ max-width: 1200px; margin: auto; }}
@@ -357,7 +357,7 @@ class Autopilot(BaseModule):
 </head>
 <body>
 <div class="container">
-    <h1>⚡ Bluesky Autopilot Report</h1>
+    <h1>⚡ bluesky Autopilot Report</h1>
     <p>Fecha: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</p>
 
     <div class="stats">
@@ -388,7 +388,7 @@ class Autopilot(BaseModule):
     </table>
 
     <p style="margin-top:30px;color:#666;text-align:center;">
-        Generado por <strong>Bluesky Autopilot v2.0</strong>
+        Generado por <strong>bluesky Autopilot v2.0</strong>
     </p>
 </div>
 </body>

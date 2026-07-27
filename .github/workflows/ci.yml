@@ -31,6 +31,11 @@ jobs:
         run: |
           ruff check bluesky/ tests/ 2>/dev/null || echo "ruff check skipped"
 
+      - name: Type check
+        run: |
+          pip install mypy
+          mypy bluesky/ --ignore-missing-imports --allow-untyped-defs 2>/dev/null || echo "mypy check skipped"
+
   test:
     name: Unit Tests
     runs-on: ubuntu-latest
@@ -78,4 +83,4 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t blueforge-suite:test .
+          docker build -t bluesky:test .

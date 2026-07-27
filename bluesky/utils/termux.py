@@ -1,5 +1,5 @@
 """
-Termux-specific utilities for running Bluesky on Android.
+Termux-specific utilities for running bluesky on Android.
 Auto-detects Termux environment and adapts commands accordingly.
 """
 

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Bluesky Plugin Loader
+bluesky Plugin Loader
 =====================
-Sistema de carga dinámica de plugins para Bluesky.
+Sistema de carga dinámica de plugins para bluesky.
 
 Soporta dos mecanismos:
   1. **Plugins locales**: directorio `plugins/` en el proyecto
@@ -72,7 +72,7 @@ class PluginDependencyError(PluginError):
 # ─── Plugin Loader ───────────────────────────────────────────────────────────
 
 class PluginLoader:
-    """Cargador de plugins para Bluesky.
+    """Cargador de plugins para bluesky.
 
     Descubre, valida y carga módulos desde:
       - Directorio local `plugins/`
@@ -421,14 +421,14 @@ def ensure_plugins_directory() -> Path:
     plugins_dir.mkdir(exist_ok=True)
     init_file = plugins_dir / "__init__.py"
     if not init_file.exists():
-        init_file.write_text("# Bluesky plugins directory\n")
+        init_file.write_text("# bluesky plugins directory\n")
     return plugins_dir
 
 
 # ─── Función helper ──────────────────────────────────────────────────────────
 
 def create_plugin_template(name: str, plugin_type: str = "attack") -> str:
-    """Genera código fuente para un plugin Bluesky.
+    """Genera código fuente para un plugin bluesky.
 
     Args:
         name: Nombre del plugin/clase.
@@ -445,11 +445,11 @@ def create_plugin_template(name: str, plugin_type: str = "attack") -> str:
         "utility": "Utilidad Bluetooth",
         "reporter": "Generador de reportes personalizado",
     }
-    description = type_map.get(plugin_type, "Plugin Bluesky personalizado")
+    description = type_map.get(plugin_type, "Plugin bluesky personalizado")
 
     return f'''#!/usr/bin/env python3
 """
-Bluesky Plugin: {name}
+bluesky Plugin: {name}
 {description}
 """
 
@@ -467,7 +467,7 @@ PLUGIN_INFO = {{
 
 
 class {class_name}:
-    """Plugin de ejemplo para Bluesky."""
+    """Plugin de ejemplo para bluesky."""
 
     def __init__(self):
         self.name = "{name}"

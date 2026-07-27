@@ -14,7 +14,7 @@ class ServiceScanner(BaseModule):
 
     name = "services"
     description = "Enumera servicios SDP (perfiles) disponibles en dispositivos Bluetooth Classic"
-    author = "Bluesky Project"
+    author = "Ruby570bocadito"
     version = "0.1.0"
     cve = ""
     requires_hardware = []

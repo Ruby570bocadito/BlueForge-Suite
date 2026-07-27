@@ -77,7 +77,7 @@ class Crackle(BaseModule):
         "de Bluetooth Low Energy mediante bruteforce offline del pairing. "
         "Explota TK=0 en Just Works y PIN de 6 dígitos en Passkey Entry"
     )
-    author = "Bluesky Project"
+    author = "Ruby570bocadito"
     version = "1.0.0"
     cve = "No CVE (diseño del protocolo BLE)"
     cve_url = "https://github.com/mikeryan/crackle"

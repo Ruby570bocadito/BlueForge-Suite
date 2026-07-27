@@ -1,1 +1,1 @@
-# Bluesky plugins directory
+# bluesky plugins directory

@@ -77,7 +77,7 @@ class BlueFrag(BaseModule):
         "desbordamiento de búfer en el stack Bluetooth de Android 8.0-9.0 "
         "para lograr ejecución remota de código sin interacción del usuario."
     )
-    author = "Bluesky Project"
+    author = "Ruby570bocadito"
     version = "1.0.0"
     cve = "CVE-2020-0022"
     cve_url = "https://nvd.nist.gov/vuln/detail/CVE-2020-0022"

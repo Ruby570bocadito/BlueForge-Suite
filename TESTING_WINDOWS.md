@@ -1,5 +1,5 @@
 
-## 🧪 Cómo hacer Testing de Bluesky en Windows
+## 🧪 Cómo hacer Testing de bluesky en Windows
 
 ### Requisitos previos
 - Python 3.8+ instalado (verificar con `python --version`)

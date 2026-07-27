@@ -24,7 +24,7 @@ class Blueborne(BaseModule):
 
     name = "blueborne"
     description = "BlueBorne: Escanea vulnerabilidades BlueBorne (CVE-2017-1000251, CVE-2017-0781, etc.) - RCE sin emparejamiento"
-    author = "Bluesky Project"
+    author = "Ruby570bocadito"
     version = "0.1.1"
     cve = "CVE-2017-1000251, CVE-2017-0781, CVE-2017-0785"
     cve_url = "https://www.armis.com/blueborne/"

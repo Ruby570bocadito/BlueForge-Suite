@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00BFFF,100:0066CC&height=250&section=header&text=BlueForge-Suite&fontSize=70&fontColor=ffffff&animation=twinkling&fontAlignY=35&desc=Bluetooth%20Security%20Auditing%20Framework&descAlignY=55&descSize=20" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00BFFF,100:0066CC&height=250&section=header&text=bluesky&fontSize=70&fontColor=ffffff&animation=twinkling&fontAlignY=35&desc=Bluetooth%20Security%20Auditing%20Framework&descAlignY=55&descSize=20" width="100%" />
 </div>
 
 <p align="center">
@@ -10,7 +10,7 @@
   <img src="https://img.shields.io/badge/Python-3.10%2B-00BFFF?style=for-the-badge&logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/Bluetooth-Classic_%2F_BLE-0066CC?style=for-the-badge&logo=bluetooth&logoColor=white" />
   <img src="https://img.shields.io/badge/BLE-5.0-1E90FF?style=for-the-badge&logo=bluetooth&logoColor=white" />
-  <img src="https://img.shields.io/github/license/Ruby570bocadito/BlueForge-Suite?style=for-the-badge&labelColor=0d1117&color=0055AA" />
+  <img src="https://img.shields.io/github/license/Ruby570bocadito/bluesky?style=for-the-badge&labelColor=0d1117&color=0055AA" />
   <img src="https://img.shields.io/badge/Platform-Linux_%7C_Windows_%7C_macOS-0077CC?style=for-the-badge&logo=linux&logoColor=white" />
   <br/>
   <img src="https://img.shields.io/badge/Modules-15%2B-00AAFF?style=for-the-badge&logo=automation&logoColor=white" />
@@ -19,12 +19,10 @@
   <img src="https://img.shields.io/badge/Vuln_Checks-13%2B-0077CC?style=for-the-badge&logo=checkmarx&logoColor=white" />
   <img src="https://img.shields.io/badge/REPL-Console-0066BB?style=for-the-badge&logo=gnubash&logoColor=white" />
   <img src="https://img.shields.io/badge/Dashboard-Web-0055AA?style=for-the-badge&logo=webpack&logoColor=white" />
-  <img src="https://img.shields.io/github/actions/workflow/status/Ruby570bocadito/BlueForge-Suite/ci.yml?style=for-the-badge&logo=githubactions&label=build&branch=main" />
+  <img src="https://img.shields.io/github/actions/workflow/status/Ruby570bocadito/bluesky/ci.yml?style=for-the-badge&logo=githubactions&label=build&branch=main" />
 </p>
 
-<p align="center">
-  <sub>Antes <b>bluesky</b> → Ahora <b>BlueForge-Suite</b> — Evolución completa del framework</sub>
-</p>
+
 
 ---
 
@@ -32,7 +30,7 @@
 
 ```mermaid
 graph TB
-    subgraph CLI["💻 BlueForge Console"]
+    subgraph CLI["💻 bluesky Console"]
         REPL["REPL Shell"]
         CMD["Command Parser"]
         LOAD["Module Loader"]
@@ -96,22 +94,22 @@ graph TB
 
 ```bash
 # Clone
-git clone https://github.com/Ruby570bocadito/BlueForge-Suite.git
-cd BlueForge-Suite
+git clone https://github.com/Ruby570bocadito/bluesky.git
+cd bluesky
 
 # Install dependencies
 pip install -r requirements.txt
 
 # Launch console
-python blueforge.py
+python -m bluesky
 
 # Launch web dashboard
-python blueforge.py --web --port 5000
+python -m bluesky web --port 5000
 
 # Run scan
-blueforge> use scanner/ble_scan
-blueforge> set interface hci0
-blueforge> run
+bluesky> use scanner/ble_scan
+bluesky> set interface hci0
+bluesky> run
 ```
 
 ---
@@ -120,24 +118,27 @@ blueforge> run
 
 | Module | Type | Target | Description |
 |--------|------|--------|-------------|
-| `scanner/classic` | Scanner | BR/EDR | L2CAP/RFCOMM device discovery |
-| `scanner/ble_scan` | Scanner | BLE | BLE advertising & GATT scan |
-| `scanner/sdp_dump` | Scanner | SDP | Service Discovery Protocol enumeration |
-| `attack/l2cap_flood` | Attack | BR/EDR | L2CAP connection flood DoS |
-| `attack/rfcomm_dos` | Attack | BR/EDR | RFCOMM channel exhaustion DoS |
-| `attack/sdp_overflow` | Attack | BR/EDR | SDP service attribute overflow |
-| `attack/ble_lldos` | Attack | BLE | Link Layer ping flood DoS |
-| `attack/ble_att_write` | Attack | BLE | ATT write request flood |
-| `attack/gatt_spam` | Attack | BLE | GATT characteristic discovery spam |
-| `attack/btlejack` | Attack | BLE | BTLEJack injection attack |
-| `attack/knob_crack` | Attack | BR/EDR | KNOB attack entropy brute-force |
-| `attack/mac_spoof` | Attack | Generic | Bluetooth MAC address spoofing |
-| `attack/recon_live` | Auxiliary | Generic | Real-time device discovery & tracking |
-| `attack/bt_proxy` | Auxiliary | Generic | Bluetooth proxy/intercept relay |
-| `attack/hci_dump` | Auxiliary | Generic | HCI packet capture & analysis |
-| `exploit/btlejacking` | Exploit | BLE | Full BTLEJack exploit chain |
-| `exploit/knob_crack` | Exploit | BR/EDR | KNOB entropy reduction exploit |
-| `exploit/bluetooth_shell` | Exploit | Generic | Bluetooth command shell injection |
+| `scanner/device_scanner` | Scanner | BR/EDR + BLE | Classic & BLE device discovery |
+| `scanner/service_scanner` | Scanner | SDP | SDP service enumeration |
+| `scanner/vuln_scanner` | Scanner | All | 13+ CVE vulnerability checks |
+| `attack/knob` | Attack | BR/EDR | KNOB attack entropy brute-force |
+| `attack/bias` | Attack | BR/EDR | BIAS attack (Bluetooth Impersonation) |
+| `attack/bluffs` | Attack | BR/EDR | BLUFFS attack (Bluetooth Forward/Future Secrecy) |
+| `attack/blueborne` | Attack | BR/EDR | BlueBorne RCE exploit |
+| `attack/bluefrag` | Attack | BLE | BlueFrag RCE (Android BLE) |
+| `attack/blesa` | Attack | BLE | BLESA connection re-establishment attack |
+| `attack/bluejacking` | Attack | Generic | BlueJacking (OBEX push spam) |
+| `attack/bluesnarfing` | Attack | Generic | BlueSnarfing (OBEX data pull) |
+| `attack/bluebugging` | Attack | Generic | BlueBugging (AT command injection) |
+| `attack/sweyntooth` | Attack | BLE | SweynTooth BLE DoS/RCE suite |
+| `attack/whisperpair` | Attack | BLE | WhisperPair pairing bypass |
+| `attack/crackle` | Attack | BLE | Crackle BLE encryption cracker |
+| `attack/btlejack` | Attack | BLE | BTLEJack injection & sniffing |
+| `attack/btspam` | Attack | Generic | BTSpam flood (3 techniques) |
+| `attack/autopilot` | Auxiliary | All | 4-phase auto scan→detect→attack→report |
+| `exploit/keystroke_injection` | Exploit | HID | Bluetooth keystroke injection |
+| `exploit/l2cap_fuzz` | Exploit | L2CAP | L2CAP protocol fuzzing |
+| `exploit/rfcomm_shell` | Exploit | RFCOMM | RFCOMM reverse shell |
 
 ---
 
@@ -190,7 +191,7 @@ blueforge> run
 
 ```
 ┌─────────────────────────────────────────────────┐
-│  🔵 BlueForge Dashboard           [🔄] [⚙️] [❌] │
+│  🔵 bluesky Dashboard           [🔄] [⚙️] [❌] │
 ├─────────────────────────────────────────────────┤
 │  ┌──────────┐  ┌──────────┐  ┌────────────────┐ │
 │  │ Devices  │  │ Attacks  │  │    Alerts      │ │
@@ -207,7 +208,7 @@ blueforge> run
 └─────────────────────────────────────────────────┘
 ```
 
-Access at `http://localhost:5000` after running `python blueforge.py --web`.
+Access at `http://localhost:5000` after running `python -m bluesky web`.
 
 ---
 
@@ -227,11 +228,11 @@ Access at `http://localhost:5000` after running `python blueforge.py --web`.
 ---
 
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0066CC,100:00BFFF&height=120&section=footer&text=BlueForge-Suite%20–%20Bluetooth%20Security%20Auditing%20Framework&fontSize=16&fontColor=ffffff&animation=twinkling" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0066CC,100:00BFFF&height=120&section=footer&text=bluesky%20–%20Bluetooth%20Security%20Auditing%20Framework&fontSize=16&fontColor=ffffff&animation=twinkling" width="100%" />
   <br/><br/>
   <sub>
     Built with ❄️ by <a href="https://github.com/Ruby570bocadito">Ruby570bocadito</a> |
-    <a href="https://github.com/Ruby570bocadito/BlueForge-Suite/issues">Report Issue</a> |
-    <a href="https://github.com/Ruby570bocadito/BlueForge-Suite/discussions">Discussion</a>
+    <a href="https://github.com/Ruby570bocadito/bluesky/issues">Report Issue</a> |
+    <a href="https://github.com/Ruby570bocadito/bluesky/discussions">Discussion</a>
   </sub>
 </div>

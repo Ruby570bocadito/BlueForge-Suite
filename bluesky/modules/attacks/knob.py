@@ -71,7 +71,7 @@ class Knob(BaseModule):
         "Degrada la entropía de clave a 1 byte para descifrar tráfico. "
         "Ataque activo via scapy + raw HCI"
     )
-    author = "Bluesky Project"
+    author = "Ruby570bocadito"
     version = "2.0.0"
     cve = "CVE-2019-9506"
     cve_url = "https://knobattack.com/"

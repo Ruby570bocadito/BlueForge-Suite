@@ -247,7 +247,7 @@ class VulnScanner(BaseModule):
 
     name = "vuln"
     description = "VulnScanner: Analiza un dispositivo contra TODAS las vulnerabilidades Bluetooth conocidas (KNOB, BIAS, BLUFFS, BlueBorne, etc.)"
-    author = "Bluesky Project"
+    author = "Ruby570bocadito"
     version = "1.0.0"
     cve = "Múltiples"
     requires_hardware = []
@@ -642,7 +642,7 @@ class VulnScanner(BaseModule):
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Bluesky Vulnerability Report - {target}</title>
+    <title>bluesky Vulnerability Report - {target}</title>
     <style>
         body {{ font-family: 'Segoe UI', Arial, sans-serif; background: #1a1a2e; color: #eee; margin: 0; padding: 20px; }}
         .container {{ max-width: 1200px; margin: auto; }}
@@ -663,7 +663,7 @@ class VulnScanner(BaseModule):
 </head>
 <body>
 <div class="container">
-    <h1>🛡️ Bluesky Vulnerability Report</h1>
+    <h1>🛡️ bluesky Vulnerability Report</h1>
     <p>Target: <strong>{device_info.get('name', 'Unknown')}</strong> ({target})</p>
     <p>Fecha: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</p>
     <p>Dispositivo: {device_info.get('class', 'Unknown')} | Fabricante: {device_info.get('manufacturer', 'Unknown')}</p>
@@ -709,7 +709,7 @@ class VulnScanner(BaseModule):
         html += """
     </ol>
     <p style="margin-top:30px;color:#666;text-align:center;">
-        Generado por <strong>Bluesky</strong> — Bluetooth Security Auditing Framework
+        Generado por <strong>bluesky</strong> — Bluetooth Security Auditing Framework
     </p>
 </div>
 </body>

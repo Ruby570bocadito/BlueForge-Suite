@@ -60,7 +60,7 @@ class Whisperpair(BaseModule):
 
     name = "whisperpair"
     description = "WhisperPair (CVE-2025-36911): Detecta dispositivos vulnerables al secuestro de Google Fast Pair y tracking de ubicación"
-    author = "Bluesky Project"
+    author = "Ruby570bocadito"
     version = "0.1.0"
     cve = "CVE-2025-36911"
     cve_url = "https://nvd.nist.gov/vuln/detail/CVE-2025-36911"

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Bluesky CLI - Bluetooth Security Auditing Framework
+bluesky CLI - Bluetooth Security Auditing Framework
 Main entry point for the command-line interface.
 """
 
@@ -8,11 +8,6 @@ import sys
 import json
 import os
 from pathlib import Path
-
-# Asegurar que el paquete bluesky se encuentra aunque no esté instalado vía pip
-_THIS_DIR = Path(__file__).parent.parent
-if str(_THIS_DIR) not in sys.path:
-    sys.path.insert(0, str(_THIS_DIR))
 
 from bluesky import __version__, __description__
 from bluesky.console import start_console
@@ -27,14 +22,14 @@ from bluesky.utils.format import (
 
 
 def print_banner():
-    """Muestra el banner de Bluesky."""
+    """Muestra el banner de bluesky."""
     banner = f"""
-{colorize('██████╗ ██╗     ██╗   ██╗███████╗██╗  ██╗██╗   ██╗', 'cyan')}
-{colorize('██╔══██╗██║     ██║   ██║██╔════╝██║ ██╔╝╚██╗ ██╔╝', 'cyan')}
-{colorize('██████╔╝██║     ██║   ██║███████╗█████╔╝  ╚████╔╝ ', 'cyan')}
-{colorize('██╔══██╗██║     ██║   ██║╚════██║██╔═██╗   ╚██╔╝  ', 'cyan')}
-{colorize('██████╔╝███████╗╚██████╔╝███████║██║  ██╗   ██║   ', 'cyan')}
-{colorize('╚═════╝ ╚══════╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝   ╚═╝   ', 'cyan')}
+{colorize(' ____  _     _    _ ______  _____ _  ____     __', 'cyan')}
+{colorize('|  _ \\| |   | |  | |  ____|/ ____| |/ /\\ \\   / /', 'cyan')}
+{colorize('| |_) | |   | |  | | |__  | (___ | \' /  \\ \\_/ / ', 'cyan')}
+{colorize('|  _ <| |   | |  | |  __|  \\___ \\|  <    \\   /  ', 'cyan')}
+{colorize('| |_) | |___| |__| | |____ ____) | . \\    | |   ', 'cyan')}
+{colorize('|____/|______\\____/|______|_____/|_|\\_\\   |_|   ', 'cyan')}
 {colorize(f'  v{__version__} - {__description__}', 'dim')}
 {colorize('  Auditoría Bluetooth para Termux & Linux', 'dim')}
     """
@@ -524,7 +519,7 @@ def cmd_session(args: list):
 
 
 def cmd_config(args: list):
-    """Gestiona la configuración de Bluesky."""
+    """Gestiona la configuración de bluesky."""
     from bluesky.utils.config import get_config, parse_key_value
 
     cfg = get_config()
@@ -609,7 +604,7 @@ def cmd_config(args: list):
 
 
 def cmd_plugin(args: list):
-    """Gestiona los plugins de Bluesky."""
+    """Gestiona los plugins de bluesky."""
     from bluesky.core.engine import ModuleEngine
 
     engine = ModuleEngine(load_plugins=True)
@@ -900,7 +895,7 @@ def cmd_spam(args: list):
         print(f"    --count <n>      Número de iteraciones (0=infinito, default: 50)")
         print(f"    --duration <s>   Duración máxima en segundos (default: 30)")
         print(f"    --delay <ms>     Delay entre ráfagas (default: 100)")
-        print(f"    --message <t>    Mensaje para OBEX Push (default: '👽 Bluesky Spam!')")
+        print(f"    --message <t>    Mensaje para OBEX Push (default: '👽 bluesky Spam!')")
         print()
         print(f"  {colorize('💡 EJEMPLOS RÁPIDOS:', 'bold')}")
         print(f"    bluesky spam all                          # Atacar a todos")

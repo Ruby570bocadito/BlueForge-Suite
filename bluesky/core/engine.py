@@ -14,11 +14,11 @@ if TYPE_CHECKING:
 
 
 class BaseModule:
-    """Clase base para todos los módulos de Bluesky."""
+    """Clase base para todos los módulos de bluesky."""
 
     name: str = ""
     description: str = ""
-    author: str = "Bluesky Project"
+    author: str = "Ruby570bocadito"
     version: str = "0.2.0"
     cve: str = ""
     cve_url: str = ""

@@ -169,7 +169,7 @@ class TestBlueskyConfig:
         cfg.load(os.path.join(self.tmp, "bluesky.json"))
         summary = cfg.export_summary()
         assert isinstance(summary, str)
-        assert "Bluesky Config Summary" in summary
+        assert "bluesky Config Summary" in summary
 
     def test_12_parse_key_value(self):
         """parse_key_value interpreta tipos correctamente."""

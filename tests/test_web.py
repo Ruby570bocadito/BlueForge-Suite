@@ -1,5 +1,5 @@
 """
-Tests para el Web Dashboard de Bluesky.
+Tests para el Web Dashboard de bluesky.
 """
 import os
 import sys
@@ -35,7 +35,7 @@ class TestWebRoutes:
         """GET / -> 200, dashboard renderizado."""
         rv = client.get("/")
         assert rv.status_code == 200, f"Status: {rv.status_code}"
-        assert b"Bluesky" in rv.data or b"bluesky" in rv.data.lower()
+        assert b"bluesky" in rv.data.lower()
 
     def test_modules_route(self, client):
         """GET /modules -> 200, lista de módulos."""

@@ -123,7 +123,7 @@ class BTSpam(BaseModule):
 
     name = "btspam"
     description = "BTSpam: Inunda dispositivos Bluetooth con pairing requests, OBEX Push y conexiones RFCOMM"
-    author = "Bluesky Project"
+    author = "Ruby570bocadito"
     version = "1.0.0"
     requires_hardware = []
     requires_root = False
@@ -142,7 +142,7 @@ class BTSpam(BaseModule):
         "TARGET": "Dirección MAC del dispositivo (vacío = todos los detectados)",
         "METHOD": "all | pairing_flood | obex_spam | connection_flood",
         "RATE": "Paquetes por segundo (1-100, default: 10)",
-        "MESSAGE": "Mensaje a enviar en OBEX Push (default: '👽 Bluesky Spam')",
+        "MESSAGE": "Mensaje a enviar en OBEX Push (default: '👽 bluesky Spam')",
         "COUNT": "Número de iteraciones (0 = infinito, default: 50)",
         "DURATION": "Duración en segundos (0 = ilimitado, default: 30)",
         "DELAY": "Delay inicial entre ráfagas en ms (default: 100)",
@@ -176,7 +176,7 @@ class BTSpam(BaseModule):
         target = self.target
         method = self.options.get("METHOD", "all").lower()
         rate = int(self.options.get("RATE", "10"))
-        message = self.options.get("MESSAGE", "👽 Bluesky Spam!")
+        message = self.options.get("MESSAGE", "👽 bluesky Spam!")
         count = int(self.options.get("COUNT", "50"))
         duration = int(self.options.get("DURATION", "30"))
         delay = int(self.options.get("DELAY", "100")) / 1000.0
@@ -710,7 +710,7 @@ class BTSpam(BaseModule):
                 "  --count <n>        Iteraciones (0=infinito, default: 50)",
                 "  --duration <s>     Duración máxima (default: 30)",
                 "  --delay <ms>       Delay entre ráfagas (default: 100)",
-                "  --message <text>   Mensaje OBEX (default: '👽 Bluesky Spam!')",
+                "  --message <text>   Mensaje OBEX (default: '👽 bluesky Spam!')",
                 "",
                 "💡  TIP: Usa 'bluesky spam all' para atacar todos los dispositivos",
                 "     automáticamente sin tener que especificar MACs.",

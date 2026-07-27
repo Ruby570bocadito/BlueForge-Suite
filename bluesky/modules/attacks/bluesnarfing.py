@@ -14,7 +14,7 @@ class Bluesnarfing(BaseModule):
 
     name = "bluesnarfing"
     description = "Bluesnarfing: Extrae información (contactos, mensajes, calendario) de dispositivos Bluetooth vulnerables vía OBEX"
-    author = "Bluesky Project"
+    author = "Ruby570bocadito"
     version = "0.1.0"
     cve = ""
     requires_hardware = []

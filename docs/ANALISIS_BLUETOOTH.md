@@ -1,8 +1,8 @@
 # 📡 Análisis Completo: Top 10 Ataques Bluetooth en Auditorías de Seguridad
 
 **Fecha:** 28 de Mayo, 2026  
-**Autor:** Security Director - Bluesky Project  
-**Propósito:** Informe técnico para la planificación del proyecto **Bluesky CLI**
+**Autor:** Security Director - Ruby570bocadito  
+**Propósito:** Informe técnico para la planificación del proyecto **bluesky CLI**
 
 ---
 
@@ -325,7 +325,7 @@ Vulnerabilidad descubierta en 2026 que permite secuestrar accesorios Bluetooth q
 
 ---
 
-## 🔧 Stack Tecnológico Recomendado para Bluesky
+## 🔧 Stack Tecnológico Recomendado para bluesky
 
 ```
 bluesky/
@@ -385,8 +385,8 @@ bluesky/
 3. **Existe un nicho claro** para una herramienta unificada tipo "Metasploit para Bluetooth" funcional en **Termux y Linux**
 4. **Hardware mínimo viable**: Adaptador CSR 4.0 (~$5) para ataques Classic; nRF52840 (~$30) para BLE avanzado
 
-### Propuesta Bluesky:
-Bluesky será una **CLI unificada de auditoría Bluetooth** que:
+### Propuesta bluesky:
+bluesky será una **CLI unificada de auditoría Bluetooth** que:
 - ✅ Funcione en **Termux (Android)** y **Linux**
 - ✅ Implemente los **10 ataques principales** como módulos independientes
 - ✅ Genere **reportes profesionales** en HTML/JSON
@@ -396,4 +396,4 @@ Bluesky será una **CLI unificada de auditoría Bluetooth** que:
 
 ---
 
-*Documento generado como parte del análisis inicial del proyecto **Bluesky** — Sistema de Auditoría Bluetooth*
+*Documento generado como parte del análisis inicial del proyecto **bluesky** — Sistema de Auditoría Bluetooth*

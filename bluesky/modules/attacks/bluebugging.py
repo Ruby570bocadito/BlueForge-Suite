@@ -15,7 +15,7 @@ class Bluebugging(BaseModule):
 
     name = "bluebugging"
     description = "Bluebugging: Obtiene control del dispositivo Bluetooth vía comandos AT sobre RFCOMM/SPP"
-    author = "Bluesky Project"
+    author = "Ruby570bocadito"
     version = "0.1.0"
     cve = ""
     requires_hardware = []

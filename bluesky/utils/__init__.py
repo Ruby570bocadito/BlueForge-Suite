@@ -1,1 +1,1 @@
-"""Bluesky utility functions."""
+"""bluesky utility functions."""

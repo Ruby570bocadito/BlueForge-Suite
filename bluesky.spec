@@ -1,6 +1,6 @@
 # -*- mode: python ; coding: utf-8 -*-
 """
-Bluesky PyInstaller Spec
+bluesky PyInstaller Spec
 Genera un binario único para Linux.
 
 Uso:
@@ -28,6 +28,7 @@ a = Analysis(
         'bluesky.core.session',
         'bluesky.core.hardware',
         'bluesky.core.reporter',
+        'bluesky.core.plugin_loader',
         # Attacks
         'bluesky.modules',
         'bluesky.modules.attacks',
@@ -41,6 +42,11 @@ a = Analysis(
         'bluesky.modules.attacks.bias',
         'bluesky.modules.attacks.bluffs',
         'bluesky.modules.attacks.sweyntooth',
+        'bluesky.modules.attacks.bluefrag',
+        'bluesky.modules.attacks.crackle',
+        'bluesky.modules.attacks.btlejack',
+        'bluesky.modules.attacks.btspam',
+        'bluesky.modules.attacks.autopilot',
         # Exploits
         'bluesky.modules.exploits',
         'bluesky.modules.exploits.keystroke_injection',
@@ -50,11 +56,17 @@ a = Analysis(
         'bluesky.modules.scanners',
         'bluesky.modules.scanners.device_scanner',
         'bluesky.modules.scanners.service_scanner',
+        'bluesky.modules.scanners.vuln_scanner',
         # Utils
         'bluesky.utils',
+        'bluesky.utils.config',
         'bluesky.utils.format',
+        'bluesky.utils.logger',
         'bluesky.utils.network',
+        'bluesky.utils.platform',
         'bluesky.utils.termux',
+        'bluesky.utils.termux_backend',
+        'bluesky.utils.windows_backend',
     ],
     hookspath=[],
     hooksconfig={},

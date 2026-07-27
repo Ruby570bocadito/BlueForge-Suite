@@ -1,5 +1,5 @@
 """
-Sistema de logging profesional para Bluesky.
+Sistema de logging profesional para bluesky.
 
 Reemplaza los prints() con niveles de logging configurables:
   DEBUG, INFO, WARNING, ERROR, CRITICAL
@@ -91,7 +91,7 @@ class CompactFormatter(logging.Formatter):
 
 class BlueskyLogger:
     """
-    Logger principal de Bluesky.
+    Logger principal de bluesky.
     
     Ejemplo:
         >>> from bluesky.utils.logger import log

@@ -1,5 +1,5 @@
 """
-Bluesky Web Dashboard - Interfaz web para auditoría Bluetooth
+bluesky Web Dashboard - Interfaz web para auditoría Bluetooth
 
 Proporciona:
   - Dashboard con estado del sistema y hardware
@@ -73,7 +73,7 @@ def create_app(engine=None, debug: bool = False) -> "Flask":
         "max_log_entries": 500,
     }
 
-    # ─── Importar módulos de Bluesky ────────────────────────────────────────
+    # ─── Importar módulos de bluesky ────────────────────────────────────────
     _import_bluesky(app)
 
     # ─── Registrar rutas ────────────────────────────────────────────────────
@@ -83,7 +83,7 @@ def create_app(engine=None, debug: bool = False) -> "Flask":
 
 
 def _import_bluesky(app):
-    """Importa componentes de Bluesky de forma segura."""
+    """Importa componentes de bluesky de forma segura."""
     try:
         from bluesky.core.engine import ModuleEngine
         if app.state["engine"] is None:
@@ -116,8 +116,8 @@ def _import_bluesky(app):
         app.state["platform_info"] = {"platform": "unknown", "os_name": "Unknown"}
 
     try:
-        from bluesky.utils.config import BlueskyConfig
-        app.state["config"] = BlueskyConfig.get_instance()
+        from bluesky.utils.config import get_config
+        app.state["config"] = get_config()
     except Exception:
         app.state["config"] = None
 
@@ -545,7 +545,7 @@ def _register_routes(app):
 
     # ─── LOG WEBHOOK ────────────────────────────────────────────────────────
 
-    add_log("info", "🌐 Bluesky Web Dashboard iniciado")
+    add_log("info", "🌐 bluesky Web Dashboard iniciado")
     add_log("info", f"Plataforma: {app.state.get('platform_info', {}).get('os_name', 'Desconocida')}")
     add_log("info", f"Módulos cargados: {len(get_modules())}")
 
@@ -555,7 +555,7 @@ def _register_routes(app):
 def run_web_server(port: int = 5000, host: str = "127.0.0.1", debug: bool = False,
                    open_browser: bool = False):
     """
-    Inicia el servidor web de Bluesky.
+    Inicia el servidor web de bluesky.
 
     Args:
         port: Puerto (default: 5000)
@@ -570,11 +570,14 @@ def run_web_server(port: int = 5000, host: str = "127.0.0.1", debug: bool = Fals
 
     app = create_app(debug=debug)
 
+    reports_dir = Path("reports")
+    reports_dir.mkdir(exist_ok=True)
+
     url = f"http://{host}:{port}"
 
     print(f"""
   ╔══════════════════════════════════════════╗
-  ║     🌐 Bluesky Web Dashboard              ║
+  ║     🌐 bluesky Web Dashboard              ║
   ╚══════════════════════════════════════════╝
 
   📡 Servidor: {url}

@@ -1,4 +1,4 @@
-"""Bluesky core engine - Module loader, session management, hardware detection, reporter."""
+"""bluesky core engine - Module loader, session management, hardware detection, reporter."""
 from bluesky.core.engine import BaseModule, ModuleEngine
 from bluesky.core.session import Session
 from bluesky.core.hardware import HardwareDetector

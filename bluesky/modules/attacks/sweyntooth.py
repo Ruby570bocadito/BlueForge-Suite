@@ -137,7 +137,7 @@ class Sweyntooth(BaseModule):
         "vulnerables a SweynTooth. Escaneo activo GATT + LL fingerprinting "
         "via scapy"
     )
-    author = "Bluesky Project"
+    author = "Ruby570bocadito"
     version = "2.0.0"
     cve = "CVE-2019-16336, CVE-2019-17060-17067, CVE-2019-17517-17520"
     cve_url = "https://asset-group.github.io/disclosures/sweyntooth/"

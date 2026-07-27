@@ -109,7 +109,7 @@ class TestReporter(unittest.TestCase):
         """Verificar generación de HTML."""
         output = self.reporter.to_html()
         self.assertIn("<html", output)
-        self.assertIn("Bluesky Audit Report", output)
+        self.assertIn("bluesky Audit Report", output)
         self.assertIn("Test Phone", output)
         self.assertIn("KNOB", output)
 
@@ -119,7 +119,7 @@ class TestReporter(unittest.TestCase):
             self.reporter.to_html(f.name)
             with open(f.name, encoding="utf-8") as fh:
                 content = fh.read()
-            self.assertIn("Bluesky Audit Report", content)
+            self.assertIn("bluesky Audit Report", content)
 
     def test_09_empty_data(self):
         """Verificar reporte con datos vacíos."""

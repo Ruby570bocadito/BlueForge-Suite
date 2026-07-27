@@ -15,7 +15,7 @@ class Bluejacking(BaseModule):
 
     name = "bluejacking"
     description = "Bluejacking: Envía mensajes no solicitados (vCards) a dispositivos Bluetooth cercanos vía OBEX Push"
-    author = "Bluesky Project"
+    author = "Ruby570bocadito"
     version = "0.1.0"
     cve = ""
     requires_hardware = []
@@ -26,7 +26,7 @@ class Bluejacking(BaseModule):
     def run(self):
         """Ejecuta el ataque Bluejacking."""
         target = self.target
-        message = self.options.get("message", "👽 Bluejacked by Bluesky!")
+        message = self.options.get("message", "👽 Bluejacked by bluesky!")
         message_type = self.options.get("type", "vcard")  # vcard | note
 
         if not target:
